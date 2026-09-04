@@ -1,19 +1,79 @@
-body{
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
     cursor: url("/imageasset/cursor.ico"), default;
     min-height: 100vh;
-    background: radial-gradient(50% 123.47% at 50% 50%, #FCF3F4 0%, #FBBEBD 100%),
-    linear-gradient(121.28deg, #FCF3F4 0%, #B0DFCD 100%),
-    linear-gradient(360deg, #FADADF 0%, #FAEEE7 100%),
-    radial-gradient(100% 164.72% at 100% 100%, #FCF3F4 0%, #B3EAC8 100%),
-    radial-gradient(100% 148.07% at 0% 0%, #FAEEE7 0%, #FCF3F4 100%);
-  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            50% 123.47% at 50% 50%,
+            #FCF3F4 0%,
+            #FBBEBD 100%
+        ),
+        linear-gradient(
+            121.28deg,
+            #FCF3F4 0%,
+            #B0DFCD 100%
+        ),
+        linear-gradient(
+            360deg,
+            #FADADF 0%,
+            #FAEEE7 100%
+        ),
+        radial-gradient(
+            100% 164.72% at 100% 100%,
+            #FCF3F4 0%,
+            #B3EAC8 100%
+        ),
+        radial-gradient(
+            100% 148.07% at 0% 0%,
+            #FAEEE7 0%,
+            #FCF3F4 100%
+        );
+
+    background-blend-mode:
+        screen,
+        color-dodge,
+        overlay,
+        difference,
+        normal;
 }
-a:hover,button:hover,#leftBtn:hover,#rightBtn:hover,.tulisanaccordion:hover,.accordion-button:hover,.imageContainer:hover,.ytp-cued-thumbnail-overlay,.ytp-cued-thumbnail-overlay-image:hover,.html5-video-player{
-    cursor: url("/imageasset/click.ico"),default !important;
+
+
+/* =========================================================
+   CURSOR
+   ========================================================= */
+
+a:hover,
+button:hover,
+#leftBtn:hover,
+#rightBtn:hover,
+.tulisanaccordion:hover,
+.accordion-button:hover,
+.imageContainer:hover,
+.ytp-cued-thumbnail-overlay,
+.ytp-cued-thumbnail-overlay-image:hover,
+.html5-video-player {
+    cursor: url("/imageasset/click.ico"), default !important;
 }
-*{
+
+
+/* =========================================================
+   GLOBAL FONT
+   ========================================================= */
+
+* {
     font-family: "Gantari", sans-serif;
 }
+
 .navbar-brand {
     font-family: "Prompt", serif;
 }
@@ -27,64 +87,104 @@ a:hover,button:hover,#leftBtn:hover,#rightBtn:hover,.tulisanaccordion:hover,.acc
     padding: 20px 70px;
 }
 
-.nav-item{
-    padding: 0px 10px;
+.nav-item {
+    padding: 0 10px;
     display: flex;
     align-items: center;
-}
-.nav-item.active .nav-link{
-    color:#ff4174;;
+    justify-content: end !important;
 }
 
-.test1 i{
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 45px;
+.nav-item.active .nav-link {
+    color: #ff4174;
 }
 
-
-.text-tengah {
-    margin: 60px 0px;
-}
-
-.nav-item:not(:last-child)::after{
+.nav-item:not(:last-child)::after {
     padding-left: 10px;
-    content: '/';
+    content: "/";
 }
-#nav{
+
+.container-fluid {
+    height: 100%;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+#nav {
     position: fixed;
     width: 100%;
     height: 120px;
     transition: all 0.3s;
     z-index: 999;
 }
-#nav.active{
+
+#nav.active {
     height: 80px;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#mainHeader{
+#mainHeader {
     height: 120px;
 }
 
-@media only screen and (max-width:992px) {
-    .nav-item:not(:last-child)::after{
-        padding-left: 0px;
-        content: '';
-    }   
+
+/* =========================================================
+   HOME / HERO
+   ========================================================= */
+
+.text-tengah {
+    margin: 60px 0;
 }
-.container-fluid{
-    height: 100%;
+
+.mainContainer h1 {
+    line-height: 50px;
 }
+
+.indexCustomContainer {
+    width: 100%;
+    max-width: 410px;
+}
+
+.test1 i {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 45px;
+}
+
+
+/* =========================================================
+   ABOUT / IMAGES
+   ========================================================= */
+
 .rounded-circle {
     width: 500px;
     height: 500px;
     border-radius: 50%;
     object-fit: cover;
 }
-.aboutCircle{
+
+.aboutCircle {
     border: 1px solid rgb(255, 173, 173) !important;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.aboutCircle:hover {
+    transform: scale(1.10);
+    background-color: rgb(255, 250, 253);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.15),
+        0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .rounded-square1 {
@@ -95,18 +195,25 @@ a:hover,button:hover,#leftBtn:hover,#rightBtn:hover,.tulisanaccordion:hover,.acc
 }
 
 .container-about {
-    padding:20px 120px;
+    padding: 20px 120px;
 }
+
 .konten-about {
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .container-about-me {
     padding: 20px 200px;
 }
+
 .konten-about-me {
     margin-top: 80px;
 }
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 
 .creative2 {
     font-family: "Ballet", cursive;
@@ -115,475 +222,64 @@ a:hover,button:hover,#leftBtn:hover,#rightBtn:hover,.tulisanaccordion:hover,.acc
     font-style: normal;
 }
 
-.indexCustomContainer{
-    width: 100%;
-    max-width: 410px;
-}
-
-.mainContainer h1{
-    line-height: 50px;
-}
-
-
-/* RESUME BUTTON STYLE */
-
-.button {
-    position: relative;
-    left: 700px;
-}
-
-.rounded-btn {
-    border-radius: 90px !important;
-    padding: 10px 20px !important;
-    color: black; 
-    border: 0.5px solid #ff647e; 
-    background-color: transparent; 
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .rounded-btn:hover {
-    background-color: #ff647e; 
-    color: white; 
-    /* border-color: #007bff;  */
-  }
-  
-  
-.description {
-    font-size: 10pt;
-    font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-}
-
-.bubble {
-    font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-    font-size: small;
-    text-align: center;
-}
-
-.bodytext1 {
-    font-size: small;
-    font-family: "Gantari", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.bodytext2 {
-    font-size: small;
-    font-family: "Gantari", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: italic;
-}
-
-
-
-
-/* PAGE PROJECT */
-
-  
-  input[type=radio] {
-    display: none;
-  }
-  
-  .cardP {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: transform .4s ease;
-    cursor: pointer;
-    width: 300px;
-    height: 300px;
-  }
-  .cardP img{
-    border-radius: 50%;
-  }
-  
-  .containerP {
-    width: 100%;
-    max-width: 800px;
-    max-height: 600px;
-    height: 100%;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cards {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .projectContainer img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
-    transform: translatex(-100%) scale(.5);
-    opacity: .4;
-    z-index: 0;
-  }
-  
-  #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
-    transform: translatex(100%) scale(.5);
-    opacity: .4;
-    z-index: 0;
-  }
-  
-  #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
-    transform: translatex(0) scale(1);
-    opacity: 1;
-    z-index: 1;
-  }
-
-
-  
-/* PROJECT PAGE */
-
-#slider {
-    margin: 0 auto;
-    width: 800px;
-    max-width: 100%;
-    text-align: center;
- }
- #slider input[type=radio] {
-    display: none;
- }
- #slider label {
-    cursor:pointer;
-    text-decoration: none;
- }
- #slides {
-    padding: 10px;
-    border: 3px solid #ccc;
-    background: #fff;
-    position: relative;
-    z-index: 1;
- }
- #overflow {
-    width: 100%;
-    overflow: hidden;
- }
- #slide1:checked ~ #slides .inner {
-    margin-left: 0;
- }
- #slide2:checked ~ #slides .inner {
-    margin-left: -100%;
- }
- #slide3:checked ~ #slides .inner {
-    margin-left: -200%;
- }
- #slide4:checked ~ #slides .inner {
-    margin-left: -300%;
- }
- #slides .inner {
-    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    width: 400%;
-    line-height: 0;
-    height: 300px;
- }
- #slides .slide {
-    width: 25%;
-    float:left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #fff;
- }
- #slides .slide_1 {
-    background: #00171F;
- }
- #slides .slide_2 {
-    background: #003459;
- }
- #slides .slide_3 {
-    background: #007EA7;
- }
- #slides .slide_4 {
-    background: #00A8E8;
- }
- #controls {
-    margin: -180px 0 0 0;
-    width: 100%;
-    height: 50px;
-    z-index: 3;
-    position: relative;
- }
- #controls label {
-    transition: opacity 0.2s ease-out;
-    display: none;
-    width: 50px;
-    height: 50px;
-    opacity: .4;
- }
- #controls label:hover {
-    opacity: 1;
- }
- #slide1:checked ~ #controls label:nth-child(2),
- #slide2:checked ~ #controls label:nth-child(3),
- #slide3:checked ~ #controls label:nth-child(4),
- #slide4:checked ~ #controls label:nth-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
-    float:right;
-    margin: 0 -50px 0 0;
-    display: block;
- }
- #slide1:checked ~ #controls label:nth-last-child(2),
- #slide2:checked ~ #controls label:nth-last-child(3),
- #slide3:checked ~ #controls label:nth-last-child(4),
- #slide4:checked ~ #controls label:nth-last-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-    float:left;
-    margin: 0 0 0 -50px;
-    display: block;
- }
- #bullets {
-    margin: 150px 0 0;
-    text-align: center;
- }
- #bullets label {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius:100%;
-    background: #ccc;
-    margin: 0 10px;
- }
- #slide1:checked ~ #bullets label:nth-child(1),
- #slide2:checked ~ #bullets label:nth-child(2),
- #slide3:checked ~ #bullets label:nth-child(3),
- #slide4:checked ~ #bullets label:nth-child(4) {
-    background: #444;
- }
- @media screen and (max-width: 900px) {
-    #slide1:checked ~ #controls label:nth-child(2),
-    #slide2:checked ~ #controls label:nth-child(3),
-    #slide3:checked ~ #controls label:nth-child(4),
-    #slide4:checked ~ #controls label:nth-child(1),
-    #slide1:checked ~ #controls label:nth-last-child(2),
-    #slide2:checked ~ #controls label:nth-last-child(3),
-    #slide3:checked ~ #controls label:nth-last-child(4),
-    #slide4:checked ~ #controls label:nth-last-child(1) {
-       margin: 0;
-    }
-    #slides {
-       max-width: calc(100% - 140px);
-       margin: 0 auto;
-    }
- }
-
- /* UI/UX PAGE */
-
- .uiux {
-    padding-top: 50px;
-}
-
-.container-uiux {
-    padding:20px 100px;
-}
-
-.video-uiux {
-    padding-top: 30px;
-    
-    
-}
-.dropdown-menu.show{
-    background-color: #ffe6f8 !important;
-}
-.dropdown-item{
-    font-size: 12px !important;
-}
-
-.dropdown-item:hover{
-    background-color: transparent !important;
-}
-
-/* ABOUT PAGE */
-
-.container-accordion {
-    padding:20px 200px;
-}
-.konten-accordion {
-    margin-top:50px;
-}
-
-.accordion-button{
-    background-color: rgb(255, 244, 235) !important;
-}
-
-.accordion-body {
-    background-color: transparent !important;
-}
-
-.carouselContainer{
-    position: relative;
-    width: 350px;
-    height: 350px;
-}
-.customCarousel{
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    height: 400px;
-}
-
-.carouselItem{
-    position: absolute;
-    min-width: 300px;
-    width: 300px;
-    height: 300px;
-    top: 50%;
-    left: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid rgb(255, 173, 173);
-
-}
-#leftBtn,#rightBtn{
-    cursor: pointer;
-    user-select: none;
-    position: absolute;
-    padding: 10px;
-    transform: translate(-50%,-50%);    
-}
-#leftBtn{
-    top: 50%;
-    left: -80px;
-}
-#rightBtn{
-    top: 50%;
-    right: -150px;
-}
-.carouselItem.active{
-    left: 50%;
-    transform: translate(-50%,-50%);    
-
-}
-.imageContainer{
-    cursor: pointer;
-    user-select: none;
-    border: 0.5px solid black;
-    border-radius: 30px;
-    overflow: hidden;
-    transition: all 0.3s;
-}
-.imageContainer:hover{
-    transform: scale(1.01);
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.printContainer{
-    gap: 20px;
-}
-.printContainer img{
-    width: 100%;
-    /* max-width: 100px; */
-}
-.singleChild img{
-    width: 100%;
-}
-
-.doubleChild{
-    gap: 20px;
-}
-.modal-content{
-    border-radius: 30px !important;
-    background: radial-gradient(50% 123.47% at 50% 50%, #FCF3F4 0%, #FBBEBD 100%),
-    linear-gradient(121.28deg, #FCF3F4 0%, #B0DFCD 100%),
-    linear-gradient(360deg, #FADADF 0%, #FAEEE7 100%),
-    radial-gradient(100% 164.72% at 100% 100%, #FCF3F4 0%, #B3EAC8 100%),
-    radial-gradient(100% 148.07% at 0% 0%, #FAEEE7 0%, #FCF3F4 100%);
-  background-blend-mode: screen, color-dodge, overlay, difference, normal;
-}
-.navbar-nav {
-    padding-right: 0px !important;
-}
-.nav-item{
-    justify-content: end !important;
-}
-
-.aboutCircle {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-}
-
-.aboutCircle:hover {
-    transform: scale(1.10);
-    background-color: rgb(255, 250, 253);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.12); /* More subtle shadow */
-}
-
 .creative {
     font-size: 90px;
     color: #ff4174;
     font-family: "Imperial Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .work {
     font-size: 60px;
     color: #ff4174;
     font-family: "Imperial Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.description {
+    font-size: 10pt;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.bubble {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-size: small;
+    text-align: center;
+}
+
+.bodytext1,
+.bodytext2 {
+    font-size: small;
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .huma {
     font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  
+    font-optical-sizing: auto;
 }
 
-.hellohi i{
+.hellohi i {
     font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
+    font-optical-sizing: auto;
 }
 
 .haloh {
     color: #ff4174;
 }
 
-.tulisanaccordion {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.minion {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.minion i {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.kaki {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.kaki i {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-}
-
+.tulisanaccordion,
+.minion,
+.minion i,
+.kaki,
+.kaki i,
 .nomor i {
-   
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
 }
@@ -606,3 +302,1045 @@ a:hover,button:hover,#leftBtn:hover,#rightBtn:hover,.tulisanaccordion:hover,.acc
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
 }
+
+
+/* =========================================================
+   RESUME BUTTON
+   ========================================================= */
+
+.button {
+    position: relative;
+    left: 700px;
+}
+
+.rounded-btn {
+    border-radius: 90px !important;
+    padding: 10px 20px !important;
+
+    color: black;
+    border: 0.5px solid #ff647e;
+    background-color: transparent;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.rounded-btn:hover {
+    background-color: #ff647e;
+    color: white;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — CARD
+   ========================================================= */
+
+input[type=radio] {
+    display: none;
+}
+
+.cardP {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    transition: transform 0.4s ease;
+
+    cursor: pointer;
+
+    width: 300px;
+    height: 300px;
+}
+
+.cardP img {
+    border-radius: 50%;
+}
+
+.containerP {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+
+    transform-style: preserve-3d;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.projectContainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* ---------- Card Positions ---------- */
+
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2 {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1 {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — SLIDER
+   ========================================================= */
+
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+
+#slides .inner {
+    transition:
+        margin-left 800ms cubic-bezier(
+            0.770,
+            0.000,
+            0.175,
+            1.000
+        );
+
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+}
+
+#slides .slide {
+    width: 25%;
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    color: #fff;
+}
+
+#slides .slide_1 {
+    background: #00171F;
+}
+
+#slides .slide_2 {
+    background: #003459;
+}
+
+#slides .slide_3 {
+    background: #007EA7;
+}
+
+#slides .slide_4 {
+    background: #00A8E8;
+}
+
+
+/* ---------- Slider Controls ---------- */
+
+#controls {
+    margin: -180px 0 0 0;
+
+    width: 100%;
+    height: 50px;
+
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+
+    display: none;
+
+    width: 50px;
+    height: 50px;
+
+    opacity: 0.4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+
+/* ---------- Next ---------- */
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+    background: url(
+        https://image.flaticon.com/icons/svg/130/130884.svg
+    ) no-repeat;
+
+    float: right;
+    margin: 0 -50px 0 0;
+
+    display: block;
+}
+
+
+/* ---------- Previous ---------- */
+
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url(
+        https://image.flaticon.com/icons/svg/130/130882.svg
+    ) no-repeat;
+
+    float: left;
+    margin: 0 0 0 -50px;
+
+    display: block;
+}
+
+
+/* ---------- Bullets ---------- */
+
+#bullets {
+    margin: 150px 0 0;
+    text-align: center;
+}
+
+#bullets label {
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 100%;
+    background: #ccc;
+
+    margin: 0 10px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+}
+
+
+/* =========================================================
+   UI/UX PAGE
+   ========================================================= */
+
+.uiux {
+    padding-top: 50px;
+}
+
+.container-uiux {
+    padding: 20px 100px;
+}
+
+.video-uiux {
+    padding-top: 30px;
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.dropdown-menu.show {
+    background-color: #ffe6f8 !important;
+}
+
+.dropdown-item {
+    font-size: 12px !important;
+}
+
+.dropdown-item:hover {
+    background-color: transparent !important;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — ACCORDION
+   ========================================================= */
+
+.container-accordion {
+    padding: 20px 200px;
+}
+
+.konten-accordion {
+    margin-top: 50px;
+}
+
+.accordion-button {
+    background-color: rgb(255, 244, 235) !important;
+}
+
+.accordion-body {
+    background-color: transparent !important;
+}
+
+
+/* =========================================================
+   CUSTOM CAROUSEL
+   ========================================================= */
+
+.carouselContainer {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.customCarousel {
+    position: absolute;
+
+    overflow: hidden;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    height: 400px;
+}
+
+.carouselItem {
+    position: absolute;
+
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+
+    top: 50%;
+    left: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid rgb(255, 173, 173);
+}
+
+.carouselItem.active {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ---------- Carousel Buttons ---------- */
+
+#leftBtn,
+#rightBtn {
+    cursor: pointer;
+    user-select: none;
+
+    position: absolute;
+
+    padding: 10px;
+
+    transform: translate(-50%, -50%);
+}
+
+#leftBtn {
+    top: 50%;
+    left: -80px;
+}
+
+#rightBtn {
+    top: 50%;
+    right: -150px;
+}
+
+
+/* =========================================================
+   IMAGE CONTAINER
+   ========================================================= */
+
+.imageContainer {
+    cursor: pointer;
+    user-select: none;
+
+    border: 0.5px solid black;
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    transition: all 0.3s;
+}
+
+.imageContainer:hover {
+    transform: scale(1.01);
+
+    box-shadow:
+        0 6px 10px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* =========================================================
+   PRINT CONTAINER
+   ========================================================= */
+
+.printContainer {
+    gap: 20px;
+}
+
+.printContainer img {
+    width: 100%;
+}
+
+.singleChild img {
+    width: 100%;
+}
+
+.doubleChild {
+    gap: 20px;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal-content {
+    border-radius: 30px !important;
+
+    background:
+        radial-gradient(
+            50% 123.47% at 50% 50%,
+            #FCF3F4 0%,
+            #FBBEBD 100%
+        ),
+        linear-gradient(
+            121.28deg,
+            #FCF3F4 0%,
+            #B0DFCD 100%
+        ),
+        linear-gradient(
+            360deg,
+            #FADADF 0%,
+            #FAEEE7 100%
+        ),
+        radial-gradient(
+            100% 164.72% at 100% 100%,
+            #FCF3F4 0%,
+            #B3EAC8 100%
+        ),
+        radial-gradient(
+            100% 148.07% at 0% 0%,
+            #FAEEE7 0%,
+            #FCF3F4 100%
+        );
+
+    background-blend-mode:
+        screen,
+        color-dodge,
+        overlay,
+        difference,
+        normal;
+}
+
+
+/* =========================================================
+   TABLET / iPAD
+   577px – 992px
+   ========================================================= */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    /* NAVBAR */
+
+    #nav {
+        height: 100px;
+    }
+
+    #nav.active {
+        height: 75px;
+    }
+
+    #mainHeader {
+        height: 100px;
+    }
+
+    .navbar-nav {
+        padding: 15px 30px !important;
+    }
+
+    .nav-item {
+        padding: 0 5px;
+    }
+
+
+    /* CONTAINERS */
+
+    .container-about {
+        padding: 20px 50px;
+    }
+
+    .container-about-me {
+        padding: 20px 60px;
+    }
+
+    .container-accordion {
+        padding: 20px 60px;
+    }
+
+    .container-uiux {
+        padding: 20px 50px;
+    }
+
+
+    /* IMAGES */
+
+    .rounded-circle {
+        width: 380px;
+        height: 380px;
+    }
+
+    .rounded-square1 {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /* TYPOGRAPHY */
+
+    .creative {
+        font-size: 70px;
+    }
+
+    .work {
+        font-size: 50px;
+    }
+
+    .test1 i {
+        font-size: 38px;
+    }
+
+
+    /* RESUME BUTTON */
+
+    .button {
+        position: static;
+        left: auto;
+        margin-top: 20px;
+    }
+
+
+    /* ABOUT */
+
+    .konten-about {
+        margin-top: 40px;
+    }
+
+    .konten-about-me {
+        margin-top: 50px;
+    }
+
+
+    /* PROJECT CARD */
+
+    .containerP {
+        max-width: 650px;
+    }
+
+    .cardP {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cards {
+        min-height: 350px;
+    }
+
+
+    /* PRINT */
+
+    .printContainer {
+        gap: 15px;
+    }
+
+    .doubleChild {
+        gap: 15px;
+    }
+
+
+    /* UI/UX */
+
+    .video-uiux {
+        padding-top: 20px;
+    }
+
+
+    /* CAROUSEL */
+
+    .carouselContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .customCarousel {
+        width: 350px;
+        height: 350px;
+    }
+
+    .carouselItem {
+        min-width: 250px;
+        width: 250px;
+        height: 250px;
+    }
+
+    #leftBtn {
+        left: -50px;
+    }
+
+    #rightBtn {
+        right: -100px;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+   576px KE BAWAH
+   ========================================================= */
+
+@media screen and (max-width: 576px) {
+
+    /* GLOBAL */
+
+    body {
+        font-size: 14px;
+    }
+
+
+    /* NAVBAR */
+
+    #nav {
+        height: 80px;
+    }
+
+    #nav.active {
+        height: 70px;
+    }
+
+    #mainHeader {
+        height: 80px;
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-nav {
+        padding: 10px 20px !important;
+        font-size: 12px;
+    }
+
+    .nav-item {
+        padding: 5px 0;
+        justify-content: flex-start !important;
+    }
+
+    .nav-item:not(:last-child)::after {
+        display: none;
+    }
+
+
+    /* CONTAINERS */
+
+    .container-about,
+    .container-about-me,
+    .container-accordion,
+    .container-uiux {
+        padding: 20px;
+    }
+
+
+    /* ABOUT */
+
+    .konten-about {
+        margin-top: 30px;
+    }
+
+    .konten-about-me {
+        margin-top: 40px;
+    }
+
+
+    /* CIRCLES */
+
+    .rounded-circle {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .rounded-square1 {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+
+    /* TYPOGRAPHY */
+
+    .creative {
+        font-size: 55px;
+        line-height: 1;
+    }
+
+    .work {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .test1 i {
+        font-size: 30px;
+    }
+
+
+    /* TEXT */
+
+    .description {
+        font-size: 9pt;
+    }
+
+    .bubble,
+    .bodytext1,
+    .bodytext2 {
+        font-size: 12px;
+    }
+
+
+    /* RESUME BUTTON */
+
+    .button {
+        position: static;
+        left: auto;
+        margin-top: 20px;
+    }
+
+    .rounded-btn {
+        padding: 8px 16px !important;
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       PROJECT CARDS
+       ===================================================== */
+
+    .containerP {
+        width: 100%;
+        max-width: 100%;
+        min-height: 400px;
+        max-height: none;
+    }
+
+    .cards {
+        height: 330px;
+        min-height: 330px;
+    }
+
+    .cardP {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    /* =====================================================
+       PROJECT SLIDER
+       ===================================================== */
+
+    #slider {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #slides {
+        max-width: calc(100% - 40px);
+        padding: 5px;
+    }
+
+    #slides .inner {
+        height: 220px;
+    }
+
+    #controls {
+        margin-top: -140px;
+    }
+
+    #controls label {
+        width: 35px;
+        height: 35px;
+    }
+
+    #bullets {
+        margin-top: 110px;
+    }
+
+    #bullets label {
+        width: 8px;
+        height: 8px;
+        margin: 0 5px;
+    }
+
+
+    /* =====================================================
+       UI/UX
+       ===================================================== */
+
+    .uiux {
+        padding-top: 30px;
+    }
+
+    .video-uiux {
+        padding-top: 15px;
+    }
+
+
+    /* =====================================================
+       ACCORDION
+       ===================================================== */
+
+    .container-accordion {
+        padding: 20px;
+    }
+
+    .konten-accordion {
+        margin-top: 30px;
+    }
+
+    .tulisanaccordion {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       CUSTOM CAROUSEL
+       ===================================================== */
+
+    .carouselContainer {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    .customCarousel {
+        width: 280px;
+        height: 280px;
+    }
+
+    .carouselItem {
+        min-width: 210px;
+        width: 210px;
+        height: 210px;
+    }
+
+    #leftBtn {
+        left: -30px;
+    }
+
+    #rightBtn {
+        right: -70px;
+    }
+
+
+    /* =====================================================
+       PRINT
+       ===================================================== */
+
+    .printContainer {
+        gap: 10px;
+    }
+
+    .doubleChild {
+        gap: 10px;
+    }
+
+    .imageContainer {
+        border-radius: 20px;
+    }
+
+
+    /* =====================================================
+       MODAL
+       ===================================================== */
+
+    .modal-content {
+        border-radius: 20px !important;
+        margin: 10px;
+    }
+
+
+    /* =====================================================
+       DROPDOWN
+       ===================================================== */
+
+    .dropdown-menu.show {
+        width: 100%;
+    }
+
+    .dropdown-item {
+        font-size: 12px !important;
+        padding: 8px 12px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONE
+   400px KE BAWAH
+   ========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .container-about,
+    .container-about-me,
+    .container-accordion,
+    .container-uiux {
+        padding: 15px;
+    }
+
+    .rounded-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .rounded-square1 {
+        width: 170px;
+        height: 170px;
+    }
+
+    .creative {
+        font-size: 45px;
+    }
+
+    .work {
+        font-size: 36px;
+    }
+
+    .test1 i {
+        font-size: 26px;
+    }
+
+    .cardP {
+        width: 190px;
+        height: 190px;
+    }
+
+    .carouselItem {
+        width: 190px;
+        height: 190px;
+        min-width: 190px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR FIX
+   Bootstrap navbar collapse
+   ========================================================= */
+
+@media screen and (max-width: 992px) {
+
+    .navbar-nav {
+        padding-right: 0 !important;
+    }
+
+    .nav-item {
+        justify-content: flex-start !important;
+    }
+
+    .navbar-collapse {
+        background-color: white;
+        padding: 15px 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .nav-item:not(:last-child)::after {
+        padding-left: 0;
+        content: "";
+    }
+}
+
